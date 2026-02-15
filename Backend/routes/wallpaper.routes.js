@@ -13,7 +13,7 @@ const {
 
 
 // CREATE
-router.post("/create",authMiddleware, wallpaperControler.createWallpaper);
+router.post("/create",authMiddleware, createWallpaper);
 
 // READ
 router.get("/", getWallpapers);
