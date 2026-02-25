@@ -6,8 +6,12 @@ const bodyparser = require("body-parser");
 const authRoutes = require("./routes/auth.routes");
 const wallpaperRouts = require("./routes/wallpaper.routes");
 const mongoose = require("mongoose");
+const cors = require('cors');
+
+
 
 const app = express();
+app.use(cors());
 
 // Use the MONGO_URI from the .env file
 mongoose.connect(process.env.MONGO_URI)
